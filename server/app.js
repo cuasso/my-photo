@@ -1,7 +1,7 @@
 const express = require('express')
-const app = express()
 const mongoose = require('mongoose')
 const { MONGOURL } = require('./keys')
+const app = express()
 const PORT = 5000
 
 mongoose.connect(MONGOURL, {
