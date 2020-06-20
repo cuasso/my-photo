@@ -6,7 +6,8 @@ const PORT = 5000
 
 mongoose.connect(MONGOURL, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useFindAndModify : false
 })
 
 mongoose.connection.on('connected', () => {
@@ -16,7 +17,6 @@ mongoose.connection.on('connected', () => {
 mongoose.connection.on('error', (err) => {
     console.log('error connectiong to database', err)
 })
-
 
 require('./models/user')
 require('./models/post')

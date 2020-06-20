@@ -17,7 +17,6 @@ const Routing = () => {
     const user = JSON.parse(localStorage.getItem('user'))
     if (user) {
       dispath({ type: 'USER', payload: user })
-      history.push('/')
     } else {
       history.push('/signin')
     }
