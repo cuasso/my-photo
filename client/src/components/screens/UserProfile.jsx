@@ -30,14 +30,6 @@ const UserProfile = () => {
             })
         }).then(res => res.json())
             .then(data => {
-
-                dispatch({
-                    type: 'UPDATE',
-                    payload: {
-                        following: data.following,
-                        followers: data.followers
-                    }
-                })
                 localStorage.setItem('user', JSON.stringify({ data }))
                 setProfile((prevState) => {
                     return {
@@ -49,6 +41,14 @@ const UserProfile = () => {
                     }
                 })
                 setshowfollow(false)
+                
+                dispatch({
+                    type: 'UPDATE',
+                    payload: {
+                        following: data.following,
+                        followers: data.followers
+                    }
+                })
             })
     }
 

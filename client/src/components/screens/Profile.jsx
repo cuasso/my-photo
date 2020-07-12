@@ -31,15 +31,15 @@ const Profile = () => {
                         src='https://es.screenja.com/static/img/thumbs/goku-ultra-instinct-1-normal-636.png' />
                 </div>
                 <div>
-                    <h4>{state ? state.name : 'loading'}</h4>
+                    <h4>{state ? state.data.name : 'loading'}</h4>
                     <div style={{
                         display: 'flex',
                         justifyContent: 'space-around',
                         width: '108%'
                     }}>
-                        <h5>40 post</h5>
-                        <h5>40 followers</h5>
-                        <h5>40 following</h5>
+                        <h5>{pics.length} post</h5>
+                        <h5>{state ? state.data.followers.length : '0'} followers</h5>
+                        <h5>{state ? state.data.following.length : '0'} following</h5>
                     </div>
                 </div>
             </div>
