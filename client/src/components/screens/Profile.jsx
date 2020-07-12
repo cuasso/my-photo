@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react'
-import { userContext, UserContext } from '../../App'
+import { UserContext } from '../../App'
 const Profile = () => {
     const [pics, setPics] = useState([])
     const { state, dispatch } = useContext(UserContext)
